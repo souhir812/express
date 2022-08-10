@@ -1,0 +1,519 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.75)), url(https://i.scdn.co/image/e92cf49011e4c26f736cd479b0b64cb08f1b52c6);
+    background-size: cover;
+    background-position: center-top;
+}
+
+/* Navbar */
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar h1 {
+    list-style: none;
+    display: inline-block;
+    margin: 15px -15px;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: .05em;
+    color: #faf9f6;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px 20px;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: .2em;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #faf9f6;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #ffb347;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.navbar ul li a:hover {
+    text-decoration: none;
+    color: #ffb347;
+    transition: 0.5s;
+}
+
+/* Banner Content */
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #faf9f6;
+
+}
+
+.content h1 {
+    font-size: 8vw;
+    margin-top: 80px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    margin-bottom: -10px;
+}
+.content p {
+    font-size: 1.5vw;
+    margin: 0px auto;
+    font-weight: 200;
+    line-height: 25px;
+    font-family: 'Albert Sans', sans-serif;
+    font-style: italic;
+}
+
+/* Orange bar */
+
+.break {
+   border-top: 8px solid #ffb347;
+   border-bottom: 2px solid #fff;
+   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+
+/* Body */
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #faf9f6;
+}
+
+/* Time Line */
+
+.timeline-title {
+    display: block;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    text-shadow: -3px 3px #fff, -2px 2px #fff, -1px 1px #fff;
+}
+
+.timeline-background {
+    width: 60%;
+    height: 150%;
+    background-color: #fff;
+    border: 2px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    position: relative;
+    left: 20%;
+    padding: 5px 0;
+}
+
+.timeline-background .timeline {
+    margin: auto;
+    width: 70%;
+    position: relative;
+    left: 15px;
+}
+
+.timeline-background .timeline ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.timeline-background .timeline ul:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+    border: 1px dashed #FDD193;
+}
+
+.timeline-background .timeline ul li {
+    margin: 50px 0px 50px 60px;
+    position: relative;
+}
+
+.timeline-background .timeline ul li > span {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -60px;
+    width: 0px;
+    height: 100%;
+    border: 1px solid #ffb347;
+}
+
+.timeline-background .timeline ul li > span:before, .timeline ul li > span:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border: 2px solid #ffb347;
+    position: absolute;
+    border-radius: 50%;
+    left: -8px;
+    background: #fff;
+}
+
+.timeline-background .timeline ul li > span:before {
+    top: -10px;
+    background: #fff;
+}
+
+.timeline-background .timeline ul li > span:after {
+    top: 100%;
+}
+
+.timeline-background .timeline ul li .year span {
+    position: absolute;
+    text-align: right;
+    left: -125px;
+    top: 40%;
+    width: 30px;
+}
+
+
+.event, .date, .year {
+    font-family: 'Albert Sans', sans-serif;
+}
+
+.year {
+    font-weight: 400;
+    font-size: 20px;
+    font-style: italic;
+    text-shadow: -1px 1px 1px #faf9f6, -2px 2px .5px #ffb347;
+}
+
+.event-title {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: .05em;
+    padding-top: 10px;
+}
+
+.event {
+    font-size: 18px;
+    font-weight: 300;
+    padding-bottom: 6px;
+    padding-top: 8px;
+}
+
+.date {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Gallery */
+
+#gallery h1 {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    text-shadow: -3px 3px #fff, -2px 2px #fff, -1px 1px #fff;
+}
+
+.gallery {
+    height: 510px;
+    width: 80vw;
+    display: flex;
+    margin: 10px auto 0;
+    box-sizing: border-box;
+    
+}
+
+.image-box {
+    margin : 1%;
+    flex-grow: 1;
+    flex-basis: 0;
+    transition: .5s;
+}
+
+.image-box img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: .5s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border: 5px solid #fff;
+}
+
+.image-box:hover {
+    flex-basis: 50%;
+    flex-grow: 1;
+}
+
+.first img {
+    border-radius: 15px 0 0 15px;
+}
+
+.last img {
+    border-radius: 0 15px 15px 0;
+}
+
+
+.footer {
+    bottom: 0%;
+    width: 100%;
+    height: 10rem;
+    background: #ffb347;
+    margin-top: 75px;
+    border-top: 4px solid #fff;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer p {
+    margin: 4px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #222;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.footer div:last-of-type {
+    text-align: right;
+}
+
+.footer a:hover {
+    color: #fff;
+    transition: .3s;
+}
+
+
+/*
+
+.timeline {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.timeline h1 {
+    display: block;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2vw;
+    font-weight: 200;
+    color: #000000;
+    margin: 10px;
+    padding-top: 40px; 
+
+}
+
+.timeline .wrapper {
+    width: 50%;
+    height: 700px;
+    background-color: #faf9f6;
+    border: 2px;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.timeline .wrapper .card {
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+}
+
+.timeline .wrapper .card .date {
+    margin: 0px 0 0 75px;
+}
+
+.timeline .wrapper .card .event {
+    margin: 0px 0 00px 150px;
+}
+
+.line {
+    width: 0%;
+    height: 500px;
+    position: absolute;
+    top: 985px;
+    left: 570px;
+    border: 2px solid rgb(215, 215, 215);
+    border-radius: 50px;
+}
+
+*/
+
+
+
+
+/*contact */ 
+
+
+.row {
+    margin: -20px 0;
+}
+
+
+.row:after {
+    content:34;
+    display: table;
+    clear: both;
+}
+
+
+.row .col {
+    padding: 0 20px;
+    float: left;
+    box-sizing: border-box;
+}
+.row .col.x-50 {
+    width: 50%;
+}
+.row .col.x-100 {
+    width: 100%;
+}
+.content-wrapper {
+    min-height: 100%;
+    position: relative;
+}
+.get-in-touch {
+    max-width: 650px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.get-in-touch .title {
+    text-align: center;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 36px;
+    line-height: 48px;
+    padding-bottom: 48px;
+}
+.contact-form .form-field {
+    position: relative;
+    margin: 32px 0;
+}
+.contact-form .input-text {
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color: #000;
+    font-family: Lusitana, serif;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+.contact-form .input-text:focus {
+    outline: none;
+}
+.contact-form .input-text:focus + .label, .contact-form .input-text.not-empty + .label {
+    transform: translateY(-24px);
+}
+.contact-form .label {
+    position: absolute;
+    left: 20px;
+    bottom: 11px;
+    font-family: Lusitana, serif;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #888;
+    cursor: text;
+    transition: transform 0.2s ease-in-out;
+}
+.contact-form .submit-btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.note {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-family: Lusitana, serif;
+    font-size: 16px;
+    line-height: 21px;
+}
+.note .link {
+    color: #888;
+    text-decoration: none;
+}
+.note .link:hover {
+    text-decoration: underline;
+}
+
+.get-in-touch{
+    margin-bottom: 20%;
+}
